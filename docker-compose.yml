@@ -3,7 +3,7 @@ services:
   postgres:
     image: postgres:12-alpine
     ports:
-      - '217.25.88.206:217.25.88.206doc'
+      - '217.25.88.206:217.25.88.206'
     volumes:
       - ./data:/var/lib/postgres
     environment:
