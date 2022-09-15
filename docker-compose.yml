@@ -1,10 +1,13 @@
 version: '3.7'
 services:
-  postgres:
-    image: postgres:12-alpine
-    server:
-      port:
-      - 217.25.88.206
+  web:
+    build: .
+    ports:
+      - "217.25.88.206:217.25.88.206"
+  db:
+    image: postgres
+    ports:
+      - "5432:5432"
 
     volumes:
       - ./data:/var/lib/postgres
